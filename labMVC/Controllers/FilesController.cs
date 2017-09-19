@@ -22,7 +22,6 @@ namespace labMVC.Controllers
 			var path = Server.MapPath($"~/TextFiles/{id}.txt");
 			ViewBag.details = System.IO.File.ReadAllText(path);
 			return View();
-
 		}
 	}
 }
