@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Index";
+    var files = ViewBag.files;
+}
+
+<h2>Index</h2>
+
+<ul>
+    @foreach (string i in files)
+    {
+        string fn = Path.GetFileNameWithoutExtension(i);
+        <li>@Html.ActionLink(@fn, "Contents",new {id=@fn},@fn)</li>
+    }
+</ul>
